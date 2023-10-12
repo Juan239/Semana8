@@ -2,6 +2,7 @@ package com.example.semana8;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-    Button botonDescargar;
+    Button botonDescargar, botonSensor;
     ImageView imagenC;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         botonDescargar = findViewById(R.id.botonDes);
+        botonSensor = findViewById(R.id.btnSensor);
         imagenC = findViewById(R.id.imageViewasd);
 
         botonDescargar.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        botonSensor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, activitySensor.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private Bitmap loadImageFromNetwork (String imageURL){

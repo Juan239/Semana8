@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
         android:id="@+id/imageViewasd"
         />
     <Button
@@ -21,6 +21,12 @@
         android:layout_gravity="center"
         android:id="@+id/botonDes"
         android:text="Cargar imagen"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/btnSensor"
+        android:layout_marginTop="20dp"
+        android:text="Sensores"/>
 
 
 
