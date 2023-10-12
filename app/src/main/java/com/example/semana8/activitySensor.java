@@ -73,6 +73,10 @@ public class activitySensor extends AppCompatActivity implements SensorEventList
             yTextView.setText("Y: " + pitchInDegrees);
             zTextView.setText("Z: " + rollInDegrees);
 
+            //Rotacion en tiempo real
+            //imagen.setRotation(-rollInDegrees);
+
+            //Rotacion fija a la derecha o a la izquierda
 
             if(rollInDegrees>0 && rollInDegrees < 45){
                 orientacion.setText("Posición normal");
@@ -87,6 +91,7 @@ public class activitySensor extends AppCompatActivity implements SensorEventList
                 orientacion.setText("Inclinado a la izquierda");
                 imagen.setRotation(90);
             }
+
         }
     }
 
